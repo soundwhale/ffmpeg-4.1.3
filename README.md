@@ -47,4 +47,10 @@ avoided because they are not part of our review process and will be ignored.
 
 ## Soundwhale Compilation
 
+## macOS
 ./configure --enable-shared --enable-hardcoded-tables --disable-frei0r --disable-libjack --disable-indev=jack --disable-libx264 --disable-libx265 --disable-programs --disable-static --enable-opencl --enable-videotoolbox --enable-libopenh264
+
+## iOS
+configure --extra-version=QtAV --disable-doc --disable-debug --enable-runtime-cpudetect --disable-programs --enable-avresample --disable-postproc --enable-cross-compile --disable-libx264 --disable-gpl --arch=arm64 --target-os=darwin --cc=clang --sysroot=$(xcrun --sdk iphoneos --show-sdk-path) --enable-pic --extra-cflags="-arch arm64 -miphoneos-version-min=7.0 -fembed-bitcode" --extra-ldflags="-arch arm64 -miphoneos-version-min=7.0 -Wl,-dead_strip"
+4.1.3
+
